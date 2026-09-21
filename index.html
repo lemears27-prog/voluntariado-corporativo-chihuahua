@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10171d" />
+  <meta name="description" content="Datos oficiales para entender el peso económico del voluntariado, las instituciones sin fines de lucro y la oportunidad empresarial en Chihuahua." />
+  <title>Voluntariado y empresa en Chihuahua · DATOS</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23f4f6f8'/%3E%3Crect x='13' y='34' width='9' height='16' rx='3' fill='%231ca88c'/%3E%3Crect x='28' y='25' width='9' height='25' rx='3' fill='%238a6fd1'/%3E%3Crect x='43' y='14' width='9' height='36' rx='3' fill='%23e8803c'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #10171d;
+      --ink-2: #17232c;
+      --ink-3: #21323d;
+      --paper: #f3f5f6;
+      --white: #ffffff;
+      --muted: #5a6470;
+      --line: #d5dde1;
+      --green: #1ca88c;
+      --green-soft: #dff4ee;
+      --purple: #8a6fd1;
+      --purple-soft: #eee9fb;
+      --orange: #e8803c;
+      --orange-soft: #fae9dc;
+      --yellow: #f2c94c;
+      --shadow: 0 28px 72px rgba(16, 23, 29, .15);
+      --radius: 26px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+    .skip-link {
+      position: fixed; top: 8px; left: 8px; z-index: 100;
+      transform: translateY(-160%); background: var(--white); color: var(--ink);
+      padding: 10px 14px; border-radius: 8px; font-weight: 850;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(16, 23, 29, .94); backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .topbar-inner {
+      max-width: var(--max); min-height: 76px; margin: auto; padding: 9px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 22px;
+    }
+    .datos-logo {
+      display: inline-flex; align-items: center; gap: 14px; background: #f4f6f8; color: #12171d;
+      border-radius: 12px; padding: 10px 16px; text-decoration: none;
+    }
+    .logo-bars { height: 31px; display: flex; align-items: flex-end; gap: 5px; }
+    .logo-bars i { display: block; width: 8px; border-radius: 3px; }
+    .logo-bars i:nth-child(1) { height: 14px; background: #1ca88c; }
+    .logo-bars i:nth-child(2) { height: 22px; background: #8a6fd1; }
+    .logo-bars i:nth-child(3) { height: 31px; background: #e8803c; }
+    .logo-copy { line-height: 1.08; }
+    .logo-copy strong { display: block; font-size: 1.15rem; letter-spacing: .075em; color: #12171d; }
+    .logo-copy span { display: block; font-size: .74rem; color: #5a6470; margin-top: 5px; white-space: nowrap; }
+    .nav { display: flex; align-items: center; gap: 3px; }
+    .nav a {
+      color: #cbd4d9; text-decoration: none; padding: 9px 10px; border-radius: 999px;
+      font-size: .84rem; font-weight: 760;
+    }
+    .nav a:hover { background: rgba(255,255,255,.08); color: var(--white); }
+
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      background: var(--ink); color: var(--white); padding: 74px 24px 72px;
+    }
+    .hero::before {
+      content: ""; position: absolute; z-index: -2; inset: 0;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(138,111,209,.28), transparent 28%),
+        radial-gradient(circle at 9% 88%, rgba(28,168,140,.2), transparent 25%);
+    }
+    .hero::after {
+      content: ""; position: absolute; z-index: -1; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black 10%, transparent 92%);
+    }
+    .hero-inner { max-width: var(--max); margin: auto; }
+    .eyebrow {
+      display: flex; align-items: center; gap: 10px; color: #62d9c1;
+      text-transform: uppercase; letter-spacing: .15em; font-size: .75rem; font-weight: 900;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 3px; background: currentColor; }
+    h1 {
+      max-width: 990px; margin: 22px 0 18px; font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.25rem, 7.4vw, 6.75rem); line-height: .94; letter-spacing: -.06em; font-weight: 500;
+    }
+    h1 em { color: #62d9c1; font-style: normal; }
+    .hero-lede {
+      max-width: 820px; margin: 0; color: #c9d3d8; font-size: clamp(1.06rem, 2vw, 1.34rem);
+    }
+    .hero-lede strong { color: var(--white); }
+
+    .hero-dashboard {
+      margin-top: 46px; display: grid; grid-template-columns: 1.18fr .82fr;
+      background: var(--white); color: var(--ink); border-radius: 30px; overflow: hidden;
+      box-shadow: 0 34px 90px rgba(0,0,0,.28);
+    }
+    .hero-main { padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: 210px 1fr; gap: 34px; align-items: center; }
+    .share-ring {
+      width: 190px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; position: relative;
+      background: conic-gradient(var(--green) 0 2.28%, #e5ecee 2.28% 100%);
+    }
+    .share-ring::before { content: ""; position: absolute; width: 145px; aspect-ratio: 1; border-radius: 50%; background: var(--white); }
+    .share-ring-content { position: relative; text-align: center; line-height: 1; }
+    .share-ring-content strong { display: block; font-family: Georgia, serif; font-size: 3.25rem; letter-spacing: -.065em; }
+    .share-ring-content span { display: block; margin-top: 8px; color: var(--muted); font-size: .72rem; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
+    .hero-main .meta, .kpi .meta, .panel-meta {
+      color: var(--muted); font-size: .73rem; line-height: 1.35; text-transform: uppercase; letter-spacing: .105em; font-weight: 850;
+    }
+    .hero-main h2 { margin: 8px 0 11px; font-family: Georgia, serif; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1; letter-spacing: -.04em; font-weight: 500; }
+    .hero-main p { margin: 0; color: var(--muted); }
+    .hero-main p strong { color: var(--ink); }
+    .hero-side { background: var(--green); padding: clamp(28px, 4vw, 42px); display: grid; align-content: center; gap: 22px; }
+    .kpi { padding-bottom: 20px; border-bottom: 1px solid rgba(16,23,29,.22); }
+    .kpi:last-child { padding-bottom: 0; border-bottom: 0; }
+    .kpi .meta { color: #163f37; }
+    .kpi strong { display: block; margin: 6px 0 4px; font-size: clamp(2.05rem, 4vw, 3.5rem); line-height: .95; letter-spacing: -.055em; }
+    .kpi span { display: block; color: #163f37; font-weight: 740; font-size: .91rem; }
+
+    main section { padding: 92px 24px; }
+    .section-inner { max-width: var(--max); margin: auto; }
+    .section-head {
+      display: grid; grid-template-columns: .82fr 1.18fr; gap: 52px; align-items: end; margin-bottom: 44px;
+    }
+    .section-head h2 {
+      font-family: Georgia, serif; margin: 8px 0 0; font-size: clamp(2.5rem, 5vw, 4.65rem);
+      line-height: .96; letter-spacing: -.055em; font-weight: 500;
+    }
+    .section-head p { color: var(--muted); font-size: 1.06rem; max-width: 62ch; margin: 0; }
+
+    .concept-section { background: var(--white); }
+    .concept-map { display: grid; grid-template-columns: 1fr 72px 1fr 72px 1fr; align-items: stretch; }
+    .concept-card { border: 1px solid var(--line); border-radius: 22px; padding: 27px; background: var(--paper); min-height: 290px; display: flex; flex-direction: column; }
+    .concept-card:nth-of-type(2) { background: var(--purple-soft); border-color: #d9cff2; }
+    .concept-card:nth-of-type(3) { background: var(--orange-soft); border-color: #f0d0b8; }
+    .concept-index { font-size: .73rem; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+    .concept-card h3 { margin: auto 0 11px; font-family: Georgia, serif; font-size: 2rem; line-height: 1.02; letter-spacing: -.035em; }
+    .concept-card p { margin: 0; color: var(--muted); }
+    .concept-arrow { display: grid; place-items: center; color: var(--green); font-size: 2.3rem; font-weight: 300; }
+    .concept-note { margin-top: 20px; border-left: 5px solid var(--orange); background: #f8fafb; padding: 20px 22px; color: var(--muted); }
+    .concept-note strong { color: var(--ink); }
+
+    .economy-section { background: var(--ink); color: var(--white); }
+    .economy-section .section-head p { color: #bdc8cd; }
+    .economy-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 20px; }
+    .economy-kpis { display: grid; gap: 14px; }
+    .economy-card { border: 1px solid #344650; border-radius: 20px; padding: 24px; background: var(--ink-2); }
+    .economy-card.accent { background: var(--orange); color: var(--ink); border-color: var(--orange); }
+    .economy-card .panel-meta { color: #9fb0b9; }
+    .economy-card.accent .panel-meta { color: #57301b; }
+    .economy-card strong { display: block; margin: 8px 0 4px; font-size: clamp(2.25rem, 4vw, 3.6rem); line-height: .95; letter-spacing: -.06em; }
+    .economy-card p { color: #c1cdd2; margin: 0; font-size: .9rem; }
+    .economy-card.accent p { color: #57301b; }
+    .sector-panel { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: clamp(26px, 4vw, 42px); min-width: 0; }
+    .panel-top { display: flex; align-items: start; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+    .panel-top h3 { font-family: Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.65rem); letter-spacing: -.04em; line-height: 1; margin: 7px 0 0; font-weight: 500; }
+    .segmented { display: flex; flex-wrap: wrap; gap: 6px; padding: 5px; background: #e9eef0; border-radius: 13px; }
+    .segmented button { border: 0; background: transparent; color: var(--muted); padding: 8px 11px; border-radius: 9px; font-size: .8rem; font-weight: 850; }
+    .segmented button[aria-pressed="true"] { background: var(--ink); color: var(--white); box-shadow: 0 4px 12px rgba(16,23,29,.16); }
+    .sector-bars { display: grid; gap: 13px; }
+    .sector-row { display: grid; grid-template-columns: minmax(155px, 1.05fr) minmax(180px, 1.5fr) 60px; gap: 13px; align-items: center; }
+    .sector-label { font-size: .83rem; font-weight: 760; line-height: 1.2; }
+    .sector-track { height: 13px; border-radius: 999px; background: #e8edef; overflow: hidden; }
+    .sector-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--purple), #b39ee9); transition: width .5s ease; }
+    .sector-value { text-align: right; font-size: .84rem; font-weight: 900; }
+    .sector-callout { margin-top: 24px; padding: 17px 18px; border-radius: 15px; background: var(--purple-soft); color: #44376b; font-size: .88rem; }
+    .sector-callout strong { color: var(--ink); }
+
+    .trend-board { display: grid; grid-template-columns: 1.42fr .58fr; border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
+    .chart-panel { padding: clamp(26px, 5vw, 48px); min-width: 0; }
+    .chart-bars {
+      height: 250px; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(22px, 5vw, 64px);
+      align-items: end; padding: 18px 12px 0; margin-top: 26px; border-bottom: 1px solid #bdc9ce;
+      background: repeating-linear-gradient(to top, transparent 0 61px, #e6ecee 61px 62px);
+    }
+    .bar-group { height: 100%; display: flex; align-items: end; justify-content: center; gap: clamp(7px, 1.3vw, 13px); position: relative; }
+    .bar { width: min(62px, 34%); min-height: 3px; border-radius: 9px 9px 0 0; position: relative; transition: height .55s cubic-bezier(.2,.75,.2,1); }
+    .bar.chih { background: linear-gradient(to top, #11826d, #32c7a9); }
+    .bar.mx { background: #cbd5d9; }
+    .bar-value { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); white-space: nowrap; font-size: .84rem; font-weight: 900; }
+    .bar-label { position: absolute; bottom: -35px; left: 0; right: 0; text-align: center; font-weight: 900; }
+    .chart-legend { display: flex; gap: 17px; flex-wrap: wrap; margin-top: 50px; color: var(--muted); font-size: .8rem; font-weight: 760; }
+    .dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; }
+    .dot.chih { background: var(--green); }
+    .dot.mx { background: #cbd5d9; }
+    .trend-aside { background: var(--purple); padding: clamp(28px, 4vw, 42px); color: var(--white); display: flex; flex-direction: column; justify-content: space-between; }
+    .trend-aside .panel-meta { color: #e5dffa; }
+    .trend-number { display: block; font-family: Georgia, serif; font-size: clamp(4rem, 8vw, 6.5rem); line-height: .84; letter-spacing: -.075em; margin: 28px 0 14px; }
+    .trend-copy { margin: 0; font-size: 1.04rem; font-weight: 780; line-height: 1.36; }
+    .trend-note { margin: 30px 0 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.3); color: #ede9fb; font-size: .82rem; }
+
+    .decision-section { background: #dfe9e8; }
+    .decision-box { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); border-radius: 30px; overflow: hidden; box-shadow: var(--shadow); }
+    .decision-inputs { padding: clamp(28px, 5vw, 52px); background: var(--ink); color: var(--white); }
+    .decision-inputs h2 { font-family: Georgia, serif; font-size: clamp(2.4rem, 4.8vw, 4.2rem); line-height: .96; letter-spacing: -.05em; font-weight: 500; margin: 10px 0 15px; }
+    .decision-inputs > p { color: #bdc9ce; margin: 0 0 28px; }
+    .field { margin-top: 17px; }
+    .field label { display: block; margin-bottom: 7px; color: #62d9c1; font-size: .75rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .field select {
+      width: 100%; appearance: none; border: 1px solid #4a5e69; border-radius: 12px; padding: 14px 44px 14px 15px;
+      color: var(--white); background-color: var(--ink-3);
+      background-image: linear-gradient(45deg, transparent 50%, #62d9c1 50%), linear-gradient(135deg, #62d9c1 50%, transparent 50%);
+      background-position: calc(100% - 19px) 21px, calc(100% - 13px) 21px; background-size: 6px 6px; background-repeat: no-repeat;
+    }
+    .generate-btn { width: 100%; margin-top: 22px; border: 0; border-radius: 12px; padding: 15px 18px; background: var(--orange); color: var(--ink); font-weight: 950; box-shadow: 0 8px 0 #8a471d; transition: transform .18s, box-shadow .18s; }
+    .generate-btn:hover { transform: translateY(3px); box-shadow: 0 5px 0 #8a471d; }
+    .decision-result { padding: clamp(28px, 5vw, 52px); display: flex; flex-direction: column; }
+    .decision-path { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 8px; align-items: center; margin-bottom: 34px; }
+    .path-node { min-height: 76px; display: grid; place-items: center; text-align: center; border-radius: 16px; padding: 12px; font-size: .78rem; font-weight: 900; background: var(--green-soft); color: #0d6253; }
+    .path-node:nth-child(3) { background: var(--purple-soft); color: #51417d; }
+    .path-node:nth-child(5) { background: var(--orange-soft); color: #7b401c; }
+    .path-arrow { color: var(--muted); font-size: 1.4rem; }
+    .result-kicker { color: var(--green); text-transform: uppercase; letter-spacing: .105em; font-size: .75rem; font-weight: 900; }
+    #result-title { font-family: Georgia, serif; font-size: clamp(1.85rem, 3.2vw, 2.65rem); line-height: 1.05; letter-spacing: -.04em; margin: 9px 0 13px; font-weight: 500; }
+    #result-copy { color: var(--muted); margin: 0; }
+    .source-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+    .source-chips span { padding: 7px 10px; border-radius: 999px; background: #edf2f3; color: #42525a; font-size: .73rem; font-weight: 850; }
+    .result-note { margin-top: auto; padding-top: 25px; color: var(--muted); font-size: .8rem; }
+
+    .gap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .gap-card { border: 1px solid var(--line); border-radius: 21px; background: var(--white); padding: 26px; min-height: 260px; display: flex; flex-direction: column; }
+    .gap-card:nth-child(2) { background: var(--green-soft); border-color: #bfdfd6; }
+    .gap-card:nth-child(3) { background: var(--orange-soft); border-color: #efceb5; }
+    .gap-card .gap-icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--ink); color: var(--white); font-weight: 950; }
+    .gap-card h3 { margin: auto 0 9px; font-family: Georgia, serif; font-size: 1.65rem; line-height: 1.05; letter-spacing: -.03em; }
+    .gap-card p { margin: 0; color: var(--muted); }
+    .measure-strip { margin-top: 18px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .measure-strip span { min-height: 86px; display: grid; place-items: center; text-align: center; padding: 10px; border-radius: 14px; background: var(--ink); color: var(--white); font-size: .76rem; font-weight: 820; }
+    .measure-strip span:nth-child(2), .measure-strip span:nth-child(5) { background: var(--green); color: var(--ink); }
+    .measure-strip span:nth-child(3), .measure-strip span:nth-child(6) { background: var(--purple); }
+
+    .sources-section { background: var(--white); }
+    .source-list { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
+    .source-item { padding: 22px 20px 22px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 62px 1fr; gap: 14px; }
+    .source-item:nth-child(odd) { padding-right: 34px; }
+    .source-item:nth-child(even) { padding-left: 34px; border-left: 1px solid var(--line); }
+    .source-year { color: var(--green); font-weight: 950; font-size: .8rem; }
+    .source-item a { font-weight: 900; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .source-item p { color: var(--muted); margin: 5px 0 0; font-size: .85rem; }
+    .method-note { margin-top: 28px; background: #eef3f4; border-left: 5px solid var(--green); padding: 20px 22px; color: #46565e; }
+    .method-note strong { color: var(--ink); }
+
+    footer { background: #060d12; color: #aab7bd; padding: 34px 24px; }
+    .footer-inner { max-width: var(--max); margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .footer-copy { max-width: 560px; font-size: .84rem; }
+    .footer-copy strong { color: var(--white); }
+    .footer-logo { transform: scale(.9); transform-origin: right center; }
+
+    @media (max-width: 980px) {
+      .nav { display: none; }
+      .hero-dashboard, .economy-layout, .trend-board, .decision-box, .section-head { grid-template-columns: 1fr; }
+      .section-head { gap: 18px; }
+      .concept-map { grid-template-columns: 1fr; gap: 12px; }
+      .concept-arrow { transform: rotate(90deg); height: 40px; }
+      .concept-card { min-height: 220px; }
+      .gap-grid { grid-template-columns: 1fr; }
+      .gap-card { min-height: 220px; }
+      .measure-strip { grid-template-columns: repeat(3, 1fr); }
+      .trend-aside { min-height: 330px; }
+    }
+    @media (max-width: 680px) {
+      .topbar-inner, .hero, main section { padding-left: 17px; padding-right: 17px; }
+      .topbar-inner { min-height: 67px; }
+      .datos-logo { padding: 9px 12px; gap: 9px; }
+      .logo-copy strong { font-size: .95rem; }
+      .logo-copy span { font-size: .61rem; }
+      .logo-bars { transform: scale(.82); transform-origin: left center; margin-right: -4px; }
+      .hero { padding-top: 54px; }
+      h1 { font-size: 3.45rem; }
+      .hero-main { grid-template-columns: 1fr; }
+      .share-ring { width: 170px; }
+      .panel-top { display: block; }
+      .panel-top .segmented { margin-top: 18px; }
+      .sector-row { grid-template-columns: minmax(112px, 1fr) 1.1fr 49px; gap: 8px; }
+      .sector-label { font-size: .72rem; }
+      .chart-bars { gap: 10px; padding-left: 3px; padding-right: 3px; }
+      .bar { width: 37%; }
+      .decision-path { grid-template-columns: 1fr; }
+      .path-arrow { transform: rotate(90deg); text-align: center; }
+      .measure-strip { grid-template-columns: repeat(2, 1fr); }
+      .source-list { grid-template-columns: 1fr; }
+      .source-item:nth-child(odd), .source-item:nth-child(even) { padding: 20px 0; border-left: 0; }
+      .footer-inner { display: block; }
+      .footer-logo { margin-top: 20px; transform-origin: left center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .001ms !important; animation-duration: .001ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="datos-logo" href="#contenido" aria-label="DATOS, inteligencia social y territorial">
+        <span class="logo-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="logo-copy"><strong>DATOS</strong><span>Inteligencia social y territorial</span></span>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#relacion">Conceptos</a><a href="#economia">Economía</a><a href="#chihuahua">Chihuahua</a><a href="#empresa">Empresa</a><a href="#fuentes">Fuentes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Datos oficiales · lectura para el sector empresarial</div>
+        <h1>Voluntariado: valor social con <em>peso económico.</em></h1>
+        <p class="hero-lede">En Chihuahua, el sector de instituciones sin fines de lucro ya forma parte de la economía medible. El siguiente paso es conectar <strong>capacidades empresariales, organizaciones y necesidades territoriales</strong> sin confundir conceptos ni atribuir causas que los datos no prueban.</p>
+
+        <div class="hero-dashboard" aria-label="Indicadores principales">
+          <div class="hero-main">
+            <div class="share-ring" aria-label="2.28 por ciento del producto interno bruto estatal">
+              <div class="share-ring-content"><strong>2.28%</strong><span>del PIB estatal</span></div>
+            </div>
+            <div>
+              <div class="meta">Chihuahua · Cuenta Satélite de las ISFL · 2023 preliminar</div>
+              <h2>25.8 mil millones de pesos</h2>
+              <p>fue el PIB de las instituciones sin fines de lucro en el estado. <strong>Incluye ISFL públicas y privadas, así como la valoración del trabajo voluntario.</strong></p>
+            </div>
+          </div>
+          <div class="hero-side">
+            <div class="kpi"><div class="meta">ISFL privadas · Chihuahua 2023</div><strong>17.3 mil mdp</strong><span>1.53% del PIB estatal.</span></div>
+            <div class="kpi"><div class="meta">Puestos remunerados · Chihuahua 2023</div><strong>41,328</strong><span>en el total de instituciones sin fines de lucro.</span></div>
+            <div class="kpi"><div class="meta">Participación semanal · Chihuahua 2024</div><strong>75,775</strong><span>personas estimadas; cálculo propio con microdatos oficiales ENUT.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept-section" id="relacion">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><div class="eyebrow">Primero, ordenar el mapa</div><h2>Tres conceptos relacionados, no equivalentes.</h2></div>
+          <p>La cuenta económica, el registro de organizaciones y la gestión empresarial observan universos distintos. Separarlos evita llamar “voluntariado corporativo” a cualquier actividad voluntaria realizada por una persona empleada.</p>
+        </div>
+        <div class="concept-map">
+          <article class="concept-card">
+            <span class="concept-index">Universo económico</span>
+            <h3>Instituciones sin fines de lucro</h3>
+            <p>INEGI cuantifica su PIB, puestos remunerados y valor del trabajo voluntario. El total incluye instituciones privadas y públicas.</p>
+          </article>
+          <div class="concept-arrow" aria-hidden="true">→</div>
+          <article class="concept-card">
+            <span class="concept-index">Universo organizacional</span>
+            <h3>Organizaciones de la sociedad civil</h3>
+            <p>El Registro Federal identifica a las OSC inscritas. Es una fuente administrativa útil, pero no equivale a todo el universo económico de las ISFL.</p>
+          </article>
+          <div class="concept-arrow" aria-hidden="true">→</div>
+          <article class="concept-card">
+            <span class="concept-index">Modalidad empresarial</span>
+            <h3>Voluntariado corporativo</h3>
+            <p>Existe cuando una empresa organiza, facilita o respalda la participación voluntaria de su personal. Las estadísticas oficiales no lo aíslan hoy para Chihuahua.</p>
+          </article>
+        </div>
+        <div class="concept-note"><strong>La relación correcta:</strong> las empresas pueden canalizar talento y tiempo mediante OSC u otras ISFL hacia causas sociales; pero esa relación debe medirse de forma explícita para evaluar cobertura, continuidad y resultados.</div>
+      </div>
+    </section>
+
+    <section class="economy-section" id="economia">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><div class="eyebrow">La conexión con el PIB</div><h2>El tiempo voluntario también genera valor económico.</h2></div>
+          <p>La Cuenta Satélite de INEGI asigna valor monetario al tiempo voluntario y lo incorpora al PIB del sector sin fines de lucro. Los datos nacionales permiten entender la escala; no deben trasladarse mecánicamente a Chihuahua.</p>
+        </div>
+        <div class="economy-layout">
+          <div class="economy-kpis">
+            <article class="economy-card"><div class="panel-meta">México · PIB de las ISFL · 2023</div><strong>3.08%</strong><p>922.2 mil millones de pesos del PIB nacional.</p></article>
+            <article class="economy-card accent"><div class="panel-meta">Valor del trabajo voluntario</div><strong>264.4 mil mdp</strong><p>Equivale a 28.7% del PIB del sector sin fines de lucro.</p></article>
+            <article class="economy-card"><div class="panel-meta">Escala humana nacional</div><strong>2.89 millones</strong><p>de personas voluntarias y 1.36 millones de puestos de trabajo voluntario contabilizados.</p></article>
+          </div>
+          <div class="sector-panel">
+            <div class="panel-top">
+              <div><div class="panel-meta">México · distribución funcional · 2023</div><h3>¿En qué campos aparece el voluntariado?</h3></div>
+              <div class="segmented" role="group" aria-label="Cambiar indicador de campos del voluntariado">
+                <button type="button" data-sector-metric="people" aria-pressed="true">Personas</button>
+                <button type="button" data-sector-metric="value" aria-pressed="false">Valor económico</button>
+              </div>
+            </div>
+            <div class="sector-bars" id="sector-bars" aria-live="polite"></div>
+            <div class="sector-callout" id="sector-callout"><strong>Dato relevante para empresas:</strong> 18.8% de las personas voluntarias se ubicó en asociaciones empresariales y profesionales o sindicatos. Esto describe la función de la institución; no prueba que la actividad haya sido organizada por un empleador.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="chihuahua">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><div class="eyebrow">La señal local</div><h2>En Chihuahua bajó la participación semanal estimada.</h2></div>
+          <p>La ENUT observa a personas y actividades realizadas en la semana anterior. Esta serie comparable es una señal de contexto para el estado, no una medición directa de programas empresariales.</p>
+        </div>
+        <div class="trend-board">
+          <div class="chart-panel">
+            <div class="panel-top">
+              <div><div class="panel-meta">Población de 12 años y más · cálculo propio con microdatos INEGI</div><h3 id="trend-title">Participación semanal</h3></div>
+              <div class="segmented" role="group" aria-label="Cambiar indicador de tendencia">
+                <button type="button" data-trend-metric="rate" aria-pressed="true">Participación</button>
+                <button type="button" data-trend-metric="hours" aria-pressed="false">Horas</button>
+              </div>
+            </div>
+            <div class="chart-bars" id="chart-bars" aria-label="Gráfica de tendencia del voluntariado en Chihuahua"></div>
+            <div class="chart-legend" id="chart-legend"><span><i class="dot chih"></i>Chihuahua</span><span><i class="dot mx"></i>Nacional</span></div>
+          </div>
+          <aside class="trend-aside" aria-live="polite">
+            <div>
+              <div class="panel-meta">Cambio estimado 2019 → 2024</div>
+              <span class="trend-number" id="trend-number">−50%</span>
+              <p class="trend-copy" id="trend-copy">en el número de personas participantes bajo la definición comparable.</p>
+            </div>
+            <p class="trend-note" id="trend-note">En 2024, Chihuahua registró 2.37% frente a 5.08% nacional. La submuestra estatal es pequeña; conviene leer el resultado como señal y no sobresegmentarlo.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision-section" id="empresa">
+      <div class="section-inner">
+        <div class="decision-box">
+          <div class="decision-inputs">
+            <div class="eyebrow">De la cifra a una decisión</div>
+            <h2>Construye un cruce empresarial.</h2>
+            <p>Combina una capacidad de la empresa, una necesidad territorial y una condición de la organización aliada. El resultado es una pregunta de análisis, no una prioridad asignada.</p>
+            <div class="field">
+              <label for="capacity">1 · Capacidad empresarial</label>
+              <select id="capacity">
+                <option value="geo">Centros de trabajo y presencia territorial</option>
+                <option value="skills">Habilidades profesionales del personal</option>
+                <option value="time">Turnos, tiempo y modalidad disponible</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="need">2 · Necesidad territorial</label>
+              <select id="need">
+                <option value="lag">Rezago social y carencias</option>
+                <option value="human">Educación, salud y cuidados</option>
+                <option value="safety">Seguridad y condiciones del entorno</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="partner">3 · Organización aliada</label>
+              <select id="partner">
+                <option value="presence">Presencia y objeto social</option>
+                <option value="tasks">Talento y tareas que requiere</option>
+                <option value="management">Capacidad de gestión y seguimiento</option>
+              </select>
+            </div>
+            <button class="generate-btn" id="generate" type="button">Construir pregunta</button>
+          </div>
+          <div class="decision-result" aria-live="polite">
+            <div class="decision-path" aria-hidden="true">
+              <div class="path-node">Empresa</div><div class="path-arrow">→</div><div class="path-node">Territorio</div><div class="path-arrow">→</div><div class="path-node">OSC / ISFL</div>
+            </div>
+            <span class="result-kicker">Pregunta resultante</span>
+            <h3 id="result-title"></h3>
+            <p id="result-copy"></p>
+            <div class="source-chips" id="result-sources"></div>
+            <p class="result-note">Las fuentes oficiales aportan la base territorial y económica. Las variables propias del programa —horas autorizadas, habilidades, recurrencia, tareas y resultados— deben levantarse directamente con empresas y organizaciones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="section-head">
+          <div><div class="eyebrow">La oportunidad de medición</div><h2>Lo que una empresa puede añadir al mapa.</h2></div>
+          <p>Hoy conocemos la escala económica del sector y una señal de participación ciudadana. Falta el puente operativo que permita distinguir actividad individual de acción corporativa y vincular horas con resultados.</p>
+        </div>
+        <div class="gap-grid">
+          <article class="gap-card"><span class="gap-icon">✓</span><h3>Lo oficial sí muestra</h3><p>PIB del sector sin fines de lucro, puestos remunerados, valor nacional del trabajo voluntario, participación semanal y contexto territorial.</p></article>
+          <article class="gap-card"><span class="gap-icon">?</span><h3>Lo oficial aún no separa</h3><p>Qué empresas tienen programa, cuántas personas participan a través del empleo, cuántas horas son facilitadas y con qué organizaciones colaboran.</p></article>
+          <article class="gap-card"><span class="gap-icon">+</span><h3>El dato empresarial puede completar</h3><p>Oferta de talento, tiempo en jornada, causa, municipio, socio implementador, continuidad y resultados para comunidad, organización y empresa.</p></article>
+        </div>
+        <div class="measure-strip" aria-label="Variables sugeridas para un sistema de medición empresarial">
+          <span>Programa y reglas</span><span>Personas y horas</span><span>Habilidades</span><span>Territorio y causa</span><span>OSC / ISFL aliada</span><span>Resultados y continuidad</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources-section" id="fuentes">
+      <div class="section-inner">
+        <div class="section-head">
+          <div><div class="eyebrow">Trazabilidad</div><h2>Fuentes oficiales y límites.</h2></div>
+          <p>Las cifras se presentan con su geografía, año y unidad de análisis. No se usan datos de estudios privados ni se atribuye aval a las instituciones citadas.</p>
+        </div>
+        <div class="source-list">
+          <article class="source-item"><span class="source-year">2023</span><div><a href="https://www.inegi.org.mx/programas/isfl/2018/" target="_blank" rel="noopener">INEGI · Cuenta Satélite de las Instituciones sin Fines de Lucro</a><p>PIB, puestos remunerados, personas voluntarias y valoración económica. Serie disponible 2008–2023; cifras 2023 preliminares.</p></div></article>
+          <article class="source-item"><span class="source-year">2014</span><div><a href="https://www.inegi.org.mx/programas/enut/2014/" target="_blank" rel="noopener">INEGI · ENUT 2014</a><p>Microdatos y documentación para la serie comparable de Chihuahua.</p></div></article>
+          <article class="source-item"><span class="source-year">2019</span><div><a href="https://www.inegi.org.mx/programas/enut/2019/" target="_blank" rel="noopener">INEGI · ENUT 2019</a><p>Punto de comparación previo para participación y horas semanales.</p></div></article>
+          <article class="source-item"><span class="source-year">2024</span><div><a href="https://www.inegi.org.mx/programas/enut/2024/" target="_blank" rel="noopener">INEGI · ENUT 2024</a><p>Microdatos oficiales; estimaciones propias con factor de expansión para Chihuahua.</p></div></article>
+          <article class="source-item"><span class="source-year">2024</span><div><a href="https://www.inegi.org.mx/programas/ce/2024/" target="_blank" rel="noopener">INEGI · Censos Económicos 2024</a><p>Actividad, escala y personal ocupado para dimensionar capacidades empresariales.</p></div></article>
+          <article class="source-item"><span class="source-year">Actual</span><div><a href="https://sii.bienestar.gob.mx/portal/" target="_blank" rel="noopener">Gobierno de México · Registro Federal de OSC</a><p>Consulta administrativa de organizaciones inscritas por ubicación, figura jurídica y otros criterios.</p></div></article>
+          <article class="source-item"><span class="source-year">Actual</span><div><a href="https://www.inegi.org.mx/app/mapa/denue/default.aspx" target="_blank" rel="noopener">INEGI · Directorio Estadístico Nacional de Unidades Económicas</a><p>Ubicación, actividad y tamaño de los establecimientos para construir cruces empresariales.</p></div></article>
+          <article class="source-item"><span class="source-year">2020</span><div><a href="https://www.coneval.org.mx/Medicion/IRS/Paginas/Indice_Rezago_Social_2020.aspx" target="_blank" rel="noopener">CONEVAL · Índice de Rezago Social</a><p>Capa oficial de contexto territorial para formular análisis de cobertura y necesidad.</p></div></article>
+        </div>
+        <div class="method-note"><strong>Cómo se obtuvieron los indicadores económicos.</strong> Los valores de Chihuahua y México se calcularon directamente a partir de los archivos abiertos oficiales de la Cuenta Satélite 2023: PIB de las ISFL dividido entre el PIB total correspondiente; valor del trabajo voluntario dividido entre el PIB de las ISFL. Las cifras están redondeadas para divulgación.</div>
+        <div class="method-note"><strong>Cómo leer la ENUT.</strong> Las estimaciones corresponden a población de 12 años y más y a la semana anterior. La submuestra de personas voluntarias en Chihuahua es pequeña: los cortes por edad, sexo u ocupación requieren medidas de precisión. La encuesta no identifica si la actividad fue organizada por una empresa. La definición ampliada disponible en 2024 no se incorporó a la serie para conservar comparabilidad.</div>
+        <div class="method-note"><strong>Distinción necesaria.</strong> “ISFL”, “OSC” y “voluntariado corporativo” no son sinónimos. La Cuenta Satélite incluye ISFL públicas y privadas; el Registro Federal cubre OSC inscritas; y el voluntariado corporativo requiere evidencia del vínculo con una empresa.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy"><strong>Análisis y visualización: Elena Mears. Consultora.</strong><br />Ejercicio independiente de divulgación con datos oficiales. Del territorio a la acción.<br />Desarrollo interactivo con apoyo de herramientas de inteligencia artificial.</div>
+      <div class="datos-logo footer-logo" aria-label="DATOS, inteligencia social y territorial">
+        <span class="logo-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="logo-copy"><strong>DATOS</strong><span>Inteligencia social y territorial</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sectorData = {
+      people: [
+        ["Religión", 31.1],
+        ["Asociaciones empresariales, profesionales y sindicatos", 18.8],
+        ["Servicios sociales", 16.5],
+        ["Desarrollo y vivienda", 15.7],
+        ["Salud", 7.6],
+        ["Enseñanza e investigación", 4.5],
+        ["Cultura y recreación", 3.3],
+        ["Derechos, promoción y política", 2.3],
+        ["No clasificadas anteriormente", 0.2]
+      ],
+      value: [
+        ["Religión", 49.5],
+        ["Desarrollo y vivienda", 14.3],
+        ["Asociaciones empresariales, profesionales y sindicatos", 12.5],
+        ["Servicios sociales", 6.2],
+        ["Enseñanza e investigación", 4.9],
+        ["Derechos, promoción y política", 4.5],
+        ["Cultura y recreación", 4.4],
+        ["Salud", 3.5],
+        ["No clasificadas anteriormente", 0.3]
+      ]
+    };
+    let sectorMetric = "people";
+    function renderSectors() {
+      const rows = sectorData[sectorMetric];
+      const max = Math.max.apply(null, rows.map(function(row) { return row[1]; }));
+      document.getElementById("sector-bars").innerHTML = rows.map(function(row) {
+        const width = Math.max(3, row[1] / max * 100);
+        return '<div class="sector-row"><span class="sector-label">' + row[0] + '</span><div class="sector-track"><div class="sector-fill" style="width:' + width + '%"></div></div><span class="sector-value">' + row[1].toFixed(1) + '%</span></div>';
+      }).join("");
+      document.getElementById("sector-callout").innerHTML = sectorMetric === "people"
+        ? "<strong>Dato relevante para empresas:</strong> 18.8% de las personas voluntarias se ubicó en asociaciones empresariales y profesionales o sindicatos. Esto describe la función de la institución; no prueba que la actividad haya sido organizada por un empleador."
+        : "<strong>La composición cambia al valorar el tiempo:</strong> religión concentró 49.5% del valor económico del trabajo voluntario; desarrollo y vivienda, 14.3%; y asociaciones empresariales, profesionales y sindicatos, 12.5%.";
+    }
+    document.querySelectorAll("[data-sector-metric]").forEach(function(button) {
+      button.addEventListener("click", function() {
+        sectorMetric = button.dataset.sectorMetric;
+        document.querySelectorAll("[data-sector-metric]").forEach(function(item) { item.setAttribute("aria-pressed", String(item === button)); });
+        renderSectors();
+      });
+    });
+
+    const trendData = {
+      rate: [
+        { year: 2014, chih: 4.53, mx: 5.29 },
+        { year: 2019, chih: 5.19, mx: 4.84 },
+        { year: 2024, chih: 2.37, mx: 5.08 }
+      ],
+      hours: [
+        { year: 2014, chih: 632456 },
+        { year: 2019, chih: 761922 },
+        { year: 2024, chih: 321122 }
+      ]
+    };
+    let trendMetric = "rate";
+    const format = new Intl.NumberFormat("es-MX");
+    function compact(value) { return value >= 1000000 ? (value / 1000000).toFixed(2) + " M" : Math.round(value / 1000) + " mil"; }
+    function renderTrend() {
+      const rows = trendData[trendMetric];
+      const max = trendMetric === "rate" ? 6 : 800000;
+      document.getElementById("chart-bars").innerHTML = rows.map(function(row) {
+        const chihHeight = Math.max(3, row.chih / max * 100);
+        const chihValue = trendMetric === "rate" ? row.chih.toFixed(2) + "%" : compact(row.chih);
+        let mx = "";
+        if (row.mx) {
+          const mxHeight = Math.max(3, row.mx / max * 100);
+          mx = '<div class="bar mx" style="height:' + mxHeight + '%"><span class="bar-value">' + row.mx.toFixed(2) + '%</span></div>';
+        }
+        return '<div class="bar-group"><div class="bar chih" style="height:' + chihHeight + '%"><span class="bar-value">' + chihValue + '</span></div>' + mx + '<span class="bar-label">' + row.year + '</span></div>';
+      }).join("");
+      document.getElementById("trend-title").textContent = trendMetric === "rate" ? "Participación semanal" : "Horas semanales estimadas";
+      document.getElementById("chart-legend").innerHTML = trendMetric === "rate"
+        ? '<span><i class="dot chih"></i>Chihuahua</span><span><i class="dot mx"></i>Nacional</span>'
+        : '<span><i class="dot chih"></i>Chihuahua</span>';
+      document.getElementById("trend-number").textContent = trendMetric === "rate" ? "−50%" : "−57.9%";
+      document.getElementById("trend-copy").textContent = trendMetric === "rate"
+        ? "en el número de personas participantes bajo la definición comparable."
+        : "en la suma estimada de horas semanales.";
+      document.getElementById("trend-note").textContent = trendMetric === "rate"
+        ? "En 2024, Chihuahua registró 2.37% frente a 5.08% nacional. La submuestra estatal es pequeña; conviene leer el resultado como señal y no sobresegmentarlo."
+        : "Las horas pasaron de 761,922 en 2019 a 321,122 en 2024. La ENUT no identifica si fueron facilitadas por una empresa.";
+      document.getElementById("chart-bars").setAttribute("aria-label", rows.map(function(row) {
+        return row.year + ": Chihuahua " + (trendMetric === "rate" ? row.chih + " por ciento" : format.format(row.chih) + " horas") + (row.mx ? ", nacional " + row.mx + " por ciento" : "");
+      }).join("; "));
+    }
+    document.querySelectorAll("[data-trend-metric]").forEach(function(button) {
+      button.addEventListener("click", function() {
+        trendMetric = button.dataset.trendMetric;
+        document.querySelectorAll("[data-trend-metric]").forEach(function(item) { item.setAttribute("aria-pressed", String(item === button)); });
+        renderTrend();
+      });
+    });
+
+    const capacity = {
+      geo: ["la presencia territorial y escala de los centros de trabajo", "INEGI · DENUE / CE 2024", "priorizar alianzas cerca de donde trabaja el personal"],
+      skills: ["las habilidades profesionales disponibles", "INEGI · CE / ENOE", "conectar talento especializado con tareas concretas"],
+      time: ["los turnos, tiempos y modalidades viables", "INEGI · ENUT / ENOE", "diseñar una participación compatible con la operación y los cuidados"]
+    };
+    const need = {
+      lag: ["el rezago social y las carencias", "INEGI / CONEVAL · territorio"],
+      human: ["las brechas de educación, salud y cuidados", "INEGI · Censo / ENUT"],
+      safety: ["las condiciones de seguridad y del entorno", "INEGI · ENVIPE"]
+    };
+    const partner = {
+      presence: ["la presencia y el objeto social de las organizaciones", "Registro Federal de OSC"],
+      tasks: ["las tareas y perfiles que requieren las organizaciones", "Dato por levantar con OSC / ISFL"],
+      management: ["la capacidad de gestión y seguimiento de las organizaciones", "Dato por levantar con OSC / ISFL"]
+    };
+    function buildQuestion() {
+      const c = capacity[document.getElementById("capacity").value];
+      const n = need[document.getElementById("need").value];
+      const p = partner[document.getElementById("partner").value];
+      document.getElementById("result-title").textContent = "¿Dónde coinciden " + c[0] + ", " + n[0] + " y " + p[0] + "?";
+      document.getElementById("result-copy").textContent = "Este cruce permitiría " + c[2] + ", conservando el diagnóstico territorial y la capacidad real de la organización aliada.";
+      document.getElementById("result-sources").innerHTML = [c[1], n[1], p[1]].map(function(item) { return "<span>" + item + "</span>"; }).join("");
+    }
+    document.getElementById("generate").addEventListener("click", buildQuestion);
+    renderSectors();
+    renderTrend();
+    buildQuestion();
+  </script>
+</body>
+</html>
